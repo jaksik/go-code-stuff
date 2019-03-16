@@ -8,7 +8,7 @@ export default ({ data }) => (
     <Layout>
     <h1>Contact {data.site.siteMetadata.title}</h1> 
     {/* <Img fluid={ConnorPic} /> */}
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true" action="/contact">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
