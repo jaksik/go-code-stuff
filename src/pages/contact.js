@@ -8,17 +8,26 @@ export default ({ data }) => (
     <Layout>
     <h1>Contact {data.site.siteMetadata.title}</h1> 
     {/* <Img fluid={ConnorPic} /> */}
-    <p>
-      Hello World, my name is Connor, I'm the creator of Go Code Stuff. This is a passion project with two main motivators...
-      1. To help others learn to Code
-      and...
-      2. To help my self learn to Code
-      I firmly believe in learning from teaching. 
-      I wrote my first lines of code over 10 years ago now. Nothing to impressive, just a little HTML on a platform called "MySpace".
-      That's really all of my experience with coding until late 2018 when I decided to enroll in a coding bootcamp.
-      The bootcamp was a game changer for me. Not only did I cut out years of trying to learn to code on my own, but the bootcamp taught me best practices for learning new technologies which has really opened doors.
-      If you've spent any time researching the vast amounts of technology out there, you would know that 
-       </p>
+    <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
   </Layout>
 )
 
