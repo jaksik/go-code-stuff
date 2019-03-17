@@ -17,6 +17,7 @@ export default ({ data }) => {
           Blog
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+<div class="ctct-inline-form" data-form-id="668ba85a-ed12-4b66-b13c-bbf2908e2a64"></div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
