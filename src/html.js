@@ -22,15 +22,6 @@ export default function HTML(props) {
         `
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            id="signupScript" 
-            src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"        
-            {async defer}
-            `
-          }}
-        />
 
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

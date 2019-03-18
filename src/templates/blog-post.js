@@ -28,7 +28,6 @@ export default ({ data }) => {
         <Img fluid={post.frontmatter.image.childImageSharp.fluid}/>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <div class="ctct-inline-form" data-form-id="668ba85a-ed12-4b66-b13c-bbf2908e2a64"></div>
       <Comments />
     </Layout>
   )

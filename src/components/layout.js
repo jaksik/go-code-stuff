@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
+import Subscribe from "./Subscribe"
 import Header from './Header'
 import './layout.css'
 
@@ -36,6 +36,7 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
+          <Subscribe/>
         </div>
       </>
     )}
