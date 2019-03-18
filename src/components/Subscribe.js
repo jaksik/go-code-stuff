@@ -1,16 +1,15 @@
 import React from 'react'
-
+const s = document.createElement('script');
 class Subscribe extends React.Component {
     constructor(...args) {
       super(...args)
       this.ref = React.createRef()
-      this.s = document.createElement('script')
     }
     componentWillMount() {
-        this.s.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'
+        s.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'
       }
     componentDidMount() {
-         this.ref.current.appendChild(this.s)
+         this.ref.current.appendChild(s)
       }
     render() {
       return (

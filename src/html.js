@@ -21,7 +21,19 @@ export default function HTML(props) {
             var _ctct_m = "b3c4aed54ee2d18860dd81d6ac9bac38";
         `
           }}
+          
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        id="signupScript";
+         src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
+         async= true;
+         defer= true;
+        `
+          }}
+        />
+
 
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
-          <Subscribe/>
+<Subscribe/>
         </div>
       </>
     )}
