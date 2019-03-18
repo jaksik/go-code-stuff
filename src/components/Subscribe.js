@@ -1,5 +1,4 @@
 import React from 'react'
-const s = document.createElement('script');
 class Subscribe extends React.Component {
     constructor(...args) {
       super(...args)
