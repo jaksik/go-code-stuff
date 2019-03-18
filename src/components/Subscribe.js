@@ -4,12 +4,15 @@ class Subscribe extends React.Component {
     constructor(...args) {
       super(...args)
       this.ref = React.createRef()
+      this.s = null
     }
     componentWillMount() {
-        s.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'
+        this.s = document.createElement('script');
+
+        this.s.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'
       }
     componentDidMount() {
-         this.ref.current.appendChild(s)
+         this.ref.current.appendChild(this.s)
       }
     render() {
       return (
