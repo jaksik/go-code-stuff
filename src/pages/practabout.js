@@ -1,13 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// import Img from 'gatsby-image';
-// import ConnorPic from './connor.JPG'
 
 export default ({ data }) => (
     <Layout>
     <h1>About {data.site.siteMetadata.title}</h1> 
-    {/* <Img fluid={ConnorPic} /> */}
     <p>
       Hello World, my name is Connor, I'm the creator of Go Code Stuff. This is a passion project with two main motivators...
       1. To help others learn to Code

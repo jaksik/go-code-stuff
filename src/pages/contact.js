@@ -6,9 +6,9 @@ import Form from "../components/Form"
 // import ConnorPic from './connor.JPG'
 
 export default ({ data }) => (
-    <Layout>
-    <h1>Contact {data.site.siteMetadata.title}</h1> 
-    <Form/>
+  <Layout>
+    <h1>Contact {data.site.siteMetadata.title}</h1>
+    <Form />
   </Layout>
 )
 

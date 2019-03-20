@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          to="/home"
           style={{
             color: 'white',
             textDecoration: 'none',
@@ -28,11 +28,14 @@ const Header = ({ siteTitle }) => (
       </h1>
       <a href="/contact"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Contact</a>
-      <a href="/hello-world"
+      <a href="/blog/hello-world"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >About</a>
-      <a href="/"
+      <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Blog</a>
+          <a href="/home"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Home</a>
     </div>
+  
   </div>
 )
 
