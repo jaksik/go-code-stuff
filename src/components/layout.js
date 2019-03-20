@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Subscribe from "./subscribe"
-import Header from './header'
+import Header from './Header'
 
 const Layout = ({ children }) => (
   <StaticQuery
