@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Form from "../components/form-contact"
 
 export default ({ data }) => (
-  <Layout>
-    <h1>Contact {data.site.siteMetadata.title}</h1>
-    <Form/>
-  </Layout>
+    <Layout>
+        <h1>About {data.site.siteMetadata.title}</h1>
+        <p>Hello world welcome to Go Code Stuff. Check back soon for an updaated "about" page.</p>
+    </Layout>
 )
 
 export const query = graphql`

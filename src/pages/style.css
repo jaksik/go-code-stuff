@@ -1,4 +1,25 @@
-#background {
+.link{
+
+    text-decoration: none;
+    color: black;
+}
+
+.post-list {
+    border: 1px solid  gainsboro;
+    padding: .5rem;
+    box-shadow: 0 -1px 4px #ede7e7;
+    margin: 1rem;
+}
+
+img{
+  height: 90% !important;
+}
+
+.post-list:hover{
+    background-color: whitesmoke;
+}
+
+#homeImage {
     height: 400px;
-    background-image: url("./images/code.gif");
+    background-image: url("../images/code.gif");
 }

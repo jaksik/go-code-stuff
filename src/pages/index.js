@@ -1,12 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import "./style.css"
+import './style.css';
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+// import Image from "../components/image"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Image />
+    </div> */}
+    <div id="homeImage"></div>
     <h1>Blog</h1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -27,6 +30,7 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
     ))}
+    
   </Layout>
 )
 

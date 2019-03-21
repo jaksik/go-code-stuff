@@ -1,34 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Metatags from '../components/Metatags'
-import Comments from "../components/Comments"
 import Img from 'gatsby-image';
+import SEO from "../components/seo"
 
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  // const url = data.data.site.siteMetadata.siteUrl
-  const { title, description } = post.frontmatter;
-  // const thumbnail =
-  //   post.frontmatter.image &&
-  //   post.frontmatter.image.childImageSharp.resize.src
-
   return (
     <Layout>
-      <Metatags
-        title={title}
-        description={description}
-      // thumbnail={thumbnail ? url + thumbnail : url + Icon}
-      // url={url}
-      // pathname={data.location.pathname}
-      />
+          <SEO title={post.frontmatter.title} description={post.frontmatter.description} keywords={[`gatsby`, `application`, `react`]} />
       <div>
-        <h1>{title}</h1>
+        <h1>{post.frontmatter.title}</h1>
         <Img fluid={post.frontmatter.image.childImageSharp.fluid}/>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <Comments />
     </Layout>
   )
 }
@@ -54,4 +40,3 @@ export const query = graphql`
     }
   }
 `
-

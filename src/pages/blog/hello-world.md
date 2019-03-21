@@ -2,7 +2,7 @@
 title: "Hello World, Welcome to Go Code Stuff"
 description: Hello world go code stuff introduction
 date: "2019-03-19"
-image: ../images/mountain.JPG
+image: ../../images/mountain.jpg
 ---
 
 Hello World
