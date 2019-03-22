@@ -40,16 +40,23 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-          name: `src`,
-          path: `${__dirname}/src/`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
-  },
-  {
-    resolve: 'gatsby-plugin-mailchimp',
-    options: {
-      endpoint: 'https://gocodestuff.us20.list-manage.com/subscribe/post?u=dc888837ace8f4ed48db217e6&amp;id=3425d3f723', // see instructions section below
     },
-  },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://gocodestuff.us20.list-manage.com/subscribe/post?u=dc888837ace8f4ed48db217e6&amp;id=3425d3f723', // see instructions section below
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-136621668-1",
+        head: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
