@@ -19,7 +19,7 @@ img{
     background-color: whitesmoke;
 }
 
-#homeImage {
+#coverImg {
     height: 400px;
     background-image: url("../images/code.gif");
 }
