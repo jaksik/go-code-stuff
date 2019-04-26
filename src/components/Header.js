@@ -32,7 +32,17 @@ const Header = ({ siteTitle }) => (
       <a href="/about"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >About</a>
       <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Blog</a>
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Store</a>
+      <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >TensorFlow</a>
+      <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >AWS</a>
+      <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Python</a>
+      <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >ReactJS</a>
+        <a href="/blog"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Web 101</a>
       <a href="/"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Home</a>
     </div>
