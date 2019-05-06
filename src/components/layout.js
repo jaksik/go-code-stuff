@@ -44,7 +44,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <Subscribe/>
-          <footer>
+          <footer style={{ textAlign: `center`, fontSize: `15px`}}>
             © {new Date().getFullYear()}, Built By
             {` `}
             <a href="https://connorjaksik.com">Jaksik Web Development</a>

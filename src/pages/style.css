@@ -23,3 +23,31 @@ img{
     height: 400px;
     background-image: url("../images/code.gif");
 }
+
+form {
+    text-align: center;
+    max-width: 650px;
+}
+
+input, select, label, textarea {
+    max-width: 100%;
+    width: 90%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+input, select {
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+}
+
+#submit {
+    text-align: center;
+}
+
+h2 {
+    margin: 50px auto;
+}

@@ -1,8 +1,9 @@
 ---
-title: "What is Machine Learning"
+title: "What is a Progressive Web App"
 description: Hello world go code stuff introduction
+category: "Web 101"
 date: "2019-03-19"
-image: ../../images/mountain.jpg
+image: ../../../images/mountain.jpg
 ---
 
 Hello World

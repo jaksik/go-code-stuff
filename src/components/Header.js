@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,23 +26,15 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h2>
       <a href="/contact"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Contact</a>
       <a href="/about"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >About</a>
+        <a href="/workshops"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Work Shops</a>
       <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Store</a>
-      <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >TensorFlow</a>
-      <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >AWS</a>
-      <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Python</a>
-      <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >ReactJS</a>
-        <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Web 101</a>
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Blog</a>
       <a href="/"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Home</a>
     </div>

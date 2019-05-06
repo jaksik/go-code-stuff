@@ -13,6 +13,7 @@ export default () => (
                     id
                     frontmatter {
                         title
+                        category
                         date(formatString: "DD MMMM, YYYY")
                     }
                     fields {
@@ -26,7 +27,7 @@ export default () => (
   `}
         render={data => (
             <div>
-                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+                {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
                 {/* <div class="dropdown">
                     <button class="dropbtn">Filter By Category</button>
                     <div class="dropdown-content">
@@ -48,6 +49,7 @@ export default () => (
                                         - {node.frontmatter.date}
                                     </span>
                                 </h3>
+                                <h5>Category: {node.frontmatter.category}</h5>
                                 <p>{node.excerpt}</p>
                             </div>
                         </Link>
