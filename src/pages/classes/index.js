@@ -1,12 +1,14 @@
 import React from "react"
-import './style.css';
-import Layout from "../components/layout"
-import PostList from "../components/post-list"
+import '../style.css';
+import Layout from "../../components/layout"
+import Classes from "../../components/card-container"
+import PostList from "../../components/post-list"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Coding Workshops</h1>
-    <h3>Check Back Soon for Up Coming Workshops</h3>
+    <h1>Learn to Code</h1>
+    <h3 style={{textAlign: `center`}}>Upcoming Classes</h3>
+    {/* <h3>Check Back Soon for Up Coming Workshops</h3>
     <strong>Web Development Intro Workshop</strong>
     <p>Learn....</p>
     <ul>
@@ -15,8 +17,8 @@ const IndexPage = () => (
       <li>How to code in HTML and CSS</li>
       <li>Strategies for learning how to code on your own</li>
       <li>Options for free web site hosting</li>
-    </ul>
-   
+    </ul> */}
+   <Classes/>
   </Layout>
 )
 

@@ -7,10 +7,10 @@ import "./../style.css"
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <a href="/blog/frameworks">Frameworks -- </a>
+    {/* <a href="/blog/frameworks">Frameworks -- </a>
     <a href="/blog/machine-learning">Machine Learning -- </a>
     <a href="/blog/aws">AWS -- </a>
-    <a href="/blog/iot">IOT -- </a>
+    <a href="/blog/iot">IOT -- </a> */}
     <h1>Blog</h1>
     <h5>Latest Posts</h5>
     <PostList/>

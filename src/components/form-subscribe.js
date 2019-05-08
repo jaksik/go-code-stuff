@@ -45,8 +45,8 @@ export default class MyGatsbyComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <h4>Sign Up For Our Weekly Newsletter</h4>
+      <div style={{ width: `80%`, margin: `50px auto`, borderStyle: `ridge`, borderRadius: `25px`, backgroundColor: `#718190` }}>
+        <h4 style={{ textAlign: `center`}}>Sign Up For Our Weekly Newsletter</h4>
         <form onSubmit={this._handleSubmit}>
 
           <input name="FNAME"

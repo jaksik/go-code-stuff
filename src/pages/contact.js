@@ -5,7 +5,7 @@ import Form from "../components/form-contact"
 
 export default ({ data }) => (
   <Layout>
-    <h1>Contact {data.site.siteMetadata.title}</h1>
+    <h1 style={{ textAlign: `center`}}>Contact</h1>
     <Form/>
   </Layout>
 )

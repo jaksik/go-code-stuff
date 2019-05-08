@@ -1,12 +1,15 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
+import { Row, Col } from 'reactstrap';
 import "./post-list.css"
 
 export default () => (
     <StaticQuery
         query={graphql`
             query {
-                allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+                allMarkdownRemark(
+                    filter: { fileAbsolutePath: {regex: "\/blog/"}}
+                    sort: { fields: [frontmatter___date], order: DESC }) {
             totalCount
             edges {
                 node {
@@ -27,34 +30,22 @@ export default () => (
   `}
         render={data => (
             <div>
-                {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-                {/* <div class="dropdown">
-                    <button class="dropbtn">Filter By Category</button>
-                    <div class="dropdown-content">
-                        <a href="#">Progressive Web App</a>
-                        <a href="#">Machine Learning</a>
-                        <a href="#">Internet Of Things</a>
-                    </div>
-                </div> */}
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id}>
-                        <Link
-                            to={node.fields.slug}
-                            className="link"
-                        >
-                            <div className="post-list">
-                                <h3>
-                                    {node.frontmatter.title}{" "}
-                                    <span>
-                                        - {node.frontmatter.date}
-                                    </span>
-                                </h3>
-                                <h5>Category: {node.frontmatter.category}</h5>
-                                <p>{node.excerpt}</p>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
+                <Row>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                        <Col xs="12" sm="6" md="4" key={node.id}>
+                            <Link
+                                to={node.fields.slug}
+                                className="link"
+                            >
+                                <div className="post-list">
+                                    <h3>{node.frontmatter.title}{" "}</h3>
+                                    <h5>Date: {node.frontmatter.date}</h5>
+                                    <p>{node.excerpt}</p>
+                                </div>
+                            </Link>
+                        </Col>
+                    ))}
+                </Row>
             </div>
         )}
     />

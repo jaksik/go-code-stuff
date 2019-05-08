@@ -31,8 +31,8 @@ const Header = ({ siteTitle }) => (
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Contact</a>
       <a href="/about"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >About</a>
-        <a href="/workshops"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Work Shops</a>
+        <a href="/classes"
+        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Classes</a>
       <a href="/blog"
         style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Blog</a>
       <a href="/"

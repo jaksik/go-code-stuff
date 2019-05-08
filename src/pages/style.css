@@ -1,5 +1,9 @@
 .link{
+    text-decoration: none;
+    color: black;
+}
 
+.link:hover {
     text-decoration: none;
     color: black;
 }
@@ -15,7 +19,7 @@ img{
   height: 90% !important;
 }
 
-.post-list:hover{
+.post-list:hover {
     background-color: whitesmoke;
 }
 
