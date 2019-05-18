@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "go-code-stuff",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A blog and library about programming.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Connor Jaksik <gocodestuff@gmail.com>",
   "dependencies": {
     "gatsby": "^2.5.5",
     "gatsby-image": "^2.1.0",

@@ -1,6 +1,6 @@
 ---
 templateKey: 'class-post'
-title: "Web Dev 101"
+title: "Intro to Data Queries"
 date: "2017-08-10"
 ---
 

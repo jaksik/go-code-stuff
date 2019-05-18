@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How to Make a Color Classifier
+title: Markdown Templates for Gatsby JS
 date: 2019-05-18T17:53:35.406Z
 description: THis is a test post
 featuredpost: true

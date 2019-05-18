@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "Comment Component"
+title: "Tensor Component"
 date: "2017-08-10"
 ---
 

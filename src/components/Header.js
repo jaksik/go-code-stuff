@@ -30,8 +30,8 @@ const Header = ({ siteTitle }) => (
       </h1>
       <Link to="/contact" className="nav-item">Contact</Link>
       <Link to="/about" className="nav-item">About</Link>
-      <Link to="/classes" className="nav-item">Classes</Link>
       <Link to="/library" className="nav-item">Library</Link>
+      <Link to="/classes" className="nav-item">Classes</Link>
       <Link to="/blog" className="nav-item">Blog</Link>
       <Link to="/" className="nav-item">Home</Link>
     </div>
