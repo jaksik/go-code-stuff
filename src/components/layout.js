@@ -4,12 +4,12 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
+
 import React from "react"
-import Helmet from 'react-helmet'
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import Header from "./Header"
-import Subscribe from "./form-subscribe"
+
+import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -25,14 +25,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-      <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'My fav blog' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -43,11 +35,10 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <Subscribe/>
-          <footer style={{ textAlign: `center`, fontSize: `15px`}}>
-            © {new Date().getFullYear()}, Built By
+          <footer>
+            © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://connorjaksik.com">Jaksik Web Development</a>
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
       </>
@@ -60,14 +51,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-//GGGGGGG  OOOOOOO    CCCCCCCCC  OOOOOO  DDDDDD      EEEEEEEE
-//GG  GGG  OOOOOOO    CCCCCCCCC  OOOOOO  DDDDDD      EEEEEEEE
-//GG       OO   OO    CC     CC  OO  OO  DD   DD     EE
-//GG  GGG  OO   OO    CC         OO  OO  DD    DD    EEEEEEEE
-//GG   GG  OO   OO    CC     CC  OO  OO  DD     DD   EEE
-//GGGGGGG  OOOOOOO    CCCCCCCCC  OO  OO  DDDDDDDDD   EEEEEEEE
-//GGGGGGG  OOOOOOO    CCCCCCCCC  OOOOOO  DDDDDDDDD   EEEEEEEE
-
-
-

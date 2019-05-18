@@ -1,25 +1,14 @@
-import React from "react"
-import '../style.css';
-import Layout from "../../components/layout"
-import Classes from "../../components/card-container"
-import PostList from "../../components/post-list"
+import React from 'react'
+import Layout from '../../components/layout'
 
-const IndexPage = () => (
+export default () => (
   <Layout>
-    <h1>Learn to Code</h1>
-    <h3 style={{textAlign: `center`}}>Upcoming Classes</h3>
-    {/* <h3>Check Back Soon for Up Coming Workshops</h3>
-    <strong>Web Development Intro Workshop</strong>
-    <p>Learn....</p>
-    <ul>
-      <li>How the internet works</li>
-      <li>The options for making a website</li>
-      <li>How to code in HTML and CSS</li>
-      <li>Strategies for learning how to code on your own</li>
-      <li>Options for free web site hosting</li>
-    </ul> */}
-   <Classes/>
+    <section className="section">
+      <div className="container">
+        <div className="content">
+          <h1>This is the Classes Page!</h1>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
-
-export default IndexPage

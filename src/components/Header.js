@@ -1,11 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./style.css"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `black`,
+      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -16,7 +17,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h2 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,17 +27,13 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h2>
-      <a href="/contact"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Contact</a>
-      <a href="/about"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >About</a>
-        <a href="/classes"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Classes</a>
-      <a href="/blog"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Blog</a>
-      <a href="/"
-        style={{ padding: "0 5px", color: "white", float: "right" }} title="github" >Home</a>
+      </h1>
+      <Link to="/contact" className="nav-item">Contact</Link>
+      <Link to="/about" className="nav-item">About</Link>
+      <Link to="/classes" className="nav-item">Classes</Link>
+      <Link to="/library" className="nav-item">Library</Link>
+      <Link to="/blog" className="nav-item">Blog</Link>
+      <Link to="/" className="nav-item">Home</Link>
     </div>
   </header>
 )

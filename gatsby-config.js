@@ -1,35 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Go Code Stuff`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `jaksik`,
+    description: `A blog and component library for emerging technologies in the computer science world.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/mountain.jpg`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-offline',
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [
-    //       `gatsby-remark-prismjs`,
-    //     ]
-    //   }
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,21 +21,23 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        endpoint: 'https://gocodestuff.us20.list-manage.com/subscribe/post?u=dc888837ace8f4ed48db217e6&amp;id=3425d3f723', // see instructions section below
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-136621668-1",
-        head: true,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    // `gatsby-plugin-offline`,
   ],
 }

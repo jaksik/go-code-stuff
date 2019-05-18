@@ -1,21 +1,21 @@
 import React from "react"
-import Layout from "../components/layout"
-import CardContainer from "../components/card-container"
-import PostList from "../components/post-list"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
+import { Link } from "gatsby"
 
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hello World</h1>
-    <div style={{ textIndent: `50px` }}>
-      <p>Go Code Stuff is a web development focused educational company. Check out our blog to learn about the latest web developer technologies or if your a complete beginner sign up for a class to start your path as a web developer.</p>
+    <SEO title="Home" />
+    <h1>Hi people</h1>
+    <p>Latest Blog Listings Will Go Here</p>
+    <p>Latest Class Updates Will Go Here</p>
+    <p>A Library preview will Go Here</p>
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Image />
     </div>
-    <h2 style={{ textAlign: `center` }}>Upcoming Classes</h2>
-    <CardContainer/>
-    <h2 style={{ textAlign: `center` }}>Latest Blog Posts</h2>
-    <PostList />
+    <Link to="/">Go to page 2</Link>
   </Layout>
 )
 
