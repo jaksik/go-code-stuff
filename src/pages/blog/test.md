@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Markdown Templates for Gatsby JS
+title: Setting Up A Netlify CMS with Gatsby JS
 date: 2019-05-18T17:53:35.406Z
-description: THis is a test post
+description: Breaking down the process to add a Netlify CMS to your Gatsby JS website, step by step.
 featuredpost: true
 featuredimage: /img/img_4447.jpg
 ---

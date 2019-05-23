@@ -8,26 +8,25 @@ import "./style.css"
 
 const IndexPage = ({ data }) => {
   const blog = data.blog
-  const meetups = data.meetups
+  // const meetups = data.meetups
   const library = data.library
-  console.log("meetups: ", meetups)
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h3>Blog</h3>
+      <h2>Blog</h2>
       <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
       <PreviewRoll
         itemWidth="50%"
         postData={blog}
       />
-      <h3>Classes</h3>
+      {/* <h2>Classes</h2>
       <p>Attend one of our classes or meetups.</p>
       <PreviewRoll
         itemWidth="100%"
         postData={meetups}
-      />
-      <h3>Library</h3>
+      /> */}
+      <h2>Library</h2>
       <p>Check out our library of useful components and code snippets</p>
       <PreviewRoll
         itemWidth="50%"

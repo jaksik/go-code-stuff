@@ -1,7 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import './style.css'
+---
+templateKey: blog-post
+title: Blog Preview Roll Component
+date: "2017-08-10"
+featuredimage: /img/img_4447.jpg
 
+---
+
+This is the blog preview component used to make this website.
+
+```js
 export default (props) => {
   console.log("props: ", props.postData.edges)
   return (
@@ -30,3 +37,4 @@ export default (props) => {
     </div>
   )
 }
+```

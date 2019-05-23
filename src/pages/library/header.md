@@ -1,8 +1,15 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import "./style.css"
+---
+templateKey: blog-post
+title: "Header Component"
+date: "2017-08-10"
+featuredimage: /img/img_4447.jpg
 
+---
+
+This is the header component used to make this website.
+
+
+```js
 const Header = ({ siteTitle, siteTheme }) => (
     <header
       style={{
@@ -31,20 +38,9 @@ const Header = ({ siteTitle, siteTheme }) => (
         <Link to="/contact" className="nav-item">Contact</Link>
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/library" className="nav-item">Library</Link>
-        {/* <Link to="/classes" className="nav-item">Classes</Link> */}
+        <Link to="/classes" className="nav-item">Classes</Link>
         <Link to="/blog" className="nav-item">Blog</Link>
         <Link to="/" className="nav-item">Home</Link>
       </div>
     </header>
-)
-
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+```

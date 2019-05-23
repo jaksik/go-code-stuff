@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Go Code Stuff`,
+    title: `<Go-Code-Stuff/>`,
     description: `A blog and component library for emerging technologies in the computer science world.`,
     author: `@gatsbyjs`,
+    theme: `#4267b2`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -21,7 +22,14 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+        ]
+      }
+    },    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
