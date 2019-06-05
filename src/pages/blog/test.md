@@ -4,7 +4,7 @@ title: Setting Up A Netlify CMS with Gatsby JS
 date: 2019-05-18T17:53:35.406Z
 description: Breaking down the process to add a Netlify CMS to your Gatsby JS website, step by step.
 featuredpost: true
-featuredimage: /img/img_4447.jpg
+image: ../../images/mountain.jpg
 ---
 Hello I'm writing about this test blog post I'm writing. Hello , this is filer text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue nibh ipsum, sit amet rhoncus est luctus porta. Morbi mattis, magna nec tempor facilisis, magna lectus ultricies tellus, lacinia vulputate elit mauris et diam. Pellentesque id elit libero. Nullam gravida semper enim, vitae euismod nibh blandit nec. Curabitur fringilla erat non ornare interdum. Morbi sit amet massa ex. Etiam fermentum dolor sit amet justo tempus varius. Duis finibus iaculis pellentesque. Nullam congue ultrices risus, eget eleifend mauris vestibulum finibus. Curabitur ultricies, nibh a semper ultrices, nunc dolor consectetur tortor, sit amet auctor sem dolor et leo. Duis ultrices suscipit commodo. Maecenas pellentesque dignissim hendrerit. Ut id lacus et neque viverra malesuada vitae vel nunc.
 

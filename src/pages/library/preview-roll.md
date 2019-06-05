@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Blog Preview Roll Component
 date: "2017-08-10"
-featuredimage: /img/img_4447.jpg
+image: ../../images/mountain.jpg
 
 ---
 

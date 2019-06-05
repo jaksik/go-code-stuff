@@ -4,7 +4,7 @@ title: Gatsby JS Image Component
 date: 2019-05-18T23:54:52.446Z
 description: Helllo testing in the library.
 featuredpost: true
-featuredimage: /img/img_4447.jpg
+image: ../../images/mountain.jpg
 tags:
   - test
   - one

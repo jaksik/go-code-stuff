@@ -1,0 +1,4 @@
+---
+templateKey: 'class-post'
+---
+
