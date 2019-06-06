@@ -13,5 +13,7 @@ A simple educational site about coding. Includes a blog and a React JS component
 * Mail Chimp News Letter Subscription Service
 * Demo library components from rendered markdown files
 * Scheduled blog posts
+* Video background library component
+* Google Analytics
 
    

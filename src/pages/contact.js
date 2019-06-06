@@ -20,7 +20,7 @@ export default () => (
           <div className="container">
             <div className="content">
               <form
-                name="contact"
+                name="test"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
