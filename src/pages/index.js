@@ -1,46 +1,109 @@
-import React from 'react'
-import Layout from '../components/layout'
-import { StaticQuery, graphql } from "gatsby"
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
+import PreviewRoll from '../components/preview-roll'
+import "./style.css"
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query SieTitleQuery {
-        site {
-          siteMetadata {
-            title
-            theme
-          }
+const IndexPage = ({ data }) => {
+  const blog = data.blog
+  // const meetups = data.meetups
+  const library = data.library
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h2>Blog</h2>
+      <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
+      <PreviewRoll
+        itemWidth="50%"
+        postData={blog}
+      />
+      {/* <h2>Classes</h2>
+      <p>Attend one of our classes or meetups.</p>
+      <PreviewRoll
+        itemWidth="100%"
+        postData={meetups}
+      /> */}
+      <h2>Library</h2>
+      <p>Check out our library of useful components and code snippets</p>
+      <PreviewRoll
+        itemWidth="50%"
+        postData={library}
+        // totalCount={props.totalCount}
+      />
+      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Image />
+      </div>
+      <Link to="/">Go to page 2</Link> */}
+    </Layout>
+  )
+}
+
+export default IndexPage
+
+export const pageQuery = graphql`
+query{
+  site {
+     siteMetadata {
+       title
+     }
+  }
+  meetups: allMarkdownRemark(                  
+    filter: { fileAbsolutePath: {regex: "\/classes/"}}
+  ) {
+    edges {
+        node {
+        id
+       excerpt
+       fields {
+           slug
+       }
+       frontmatter {
+           date(formatString: "MMMM DD, YYYY")
+           title
+           description
+         }
+     }
+   }
+ }
+  blog: allMarkdownRemark (                  
+   filter: { fileAbsolutePath: {regex: "\/blog/"}}
+  ) {
+    edges {
+      node {
+        id
+        excerpt
+        fields {
+           slug
+        }
+        frontmatter {
+           date(formatString: "MMMM DD, YYYY")
+           title
+           description
         }
       }
-    `}
-    render={data => (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <form
-                name="test"
-                method="post"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                style={{ width: `80%`, margin: `50px auto`, borderStyle: `ridge`, borderRadius: `25px`, backgroundColor: data.site.siteMetadata.theme }}
-              >
-                <input style={{ display: `none` }} type="email" /><br />
-                <h4 style={{ color: `white` }}>Ideas, thoughts, coffee?</h4>
-                <h4 style={{ color: `white` }}>Contact {data.site.siteMetadata.title}</h4>
-                <label for="name">Name: *</label>
-                <input name="name" placeholder="  First and Last Name" type="text" /><br />
-                <label for="email">Email: *</label>
-                <input name="email" placeholder="  Email" type="email" /><br />
-                <label for="message">Your Message:</label>
-                <textarea name="message" placeholder="  Anything else we should know before your lesson?" type="textarea" /><br />
-                <button style={{ margin: `15px auto`, borderRadius: `10px` }}>Submit</button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    )}
-  />
-)
+    }
+  }
+
+  library: allMarkdownRemark (                  
+    filter: { fileAbsolutePath: {regex: "\/library/"}}
+   ) {
+     edges {
+       node {
+         id
+         excerpt
+         fields {
+            slug
+         }
+         frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+         }
+       }
+     }
+   }
+}
+`
