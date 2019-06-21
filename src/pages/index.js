@@ -14,6 +14,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <h1>Learn To Code</h1>
       <h2>Blog</h2>
       <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
       <PreviewRoll

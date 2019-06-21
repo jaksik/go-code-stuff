@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `<Go-Code-Stuff/>`,
+    title: `<gocodestuff.com/>`,
     description: `A blog and component library for emerging technologies in the computer science world.`,
     author: `@gatsbyjs`,
-    theme: `#4267b2`,
+    theme: `#333`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

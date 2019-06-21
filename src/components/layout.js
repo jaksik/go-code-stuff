@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
           <footer style={{ textAlign: `center`, fontSize: `15px` }}>
             © {new Date().getFullYear()}, Built By
             {` `}
-            <a href="https://connorjaksik.com">Jaksik Web Development</a>
+            <a href="https://connorjaksik.com">Connor Jaksik</a>
           </footer>
         </div>
       </>
