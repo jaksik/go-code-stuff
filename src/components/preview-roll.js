@@ -11,7 +11,7 @@ export default (props) => {
         {props.postData.edges.map(({ node }) => {
           console.log("preview Roll: ", node)
           return (
-            <div className={props.class} style={{ width: props.itemWidth, float: `left` }}>
+            <div className={props.class} style={{ width: props.itemWidth }}>
               <Link
                 to={node.fields.slug}
                 className="link"

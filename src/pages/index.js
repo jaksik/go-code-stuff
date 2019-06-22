@@ -14,30 +14,32 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Learn To Code</h1>
-      <h2>Blog</h2>
-      <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
-      <PreviewRoll
-        itemWidth="50%"
-        postData={blog}
-      />
-      {/* <h2>Classes</h2>
-      <p>Attend one of our classes or meetups.</p>
-      <PreviewRoll
-        itemWidth="100%"
-        postData={meetups}
-      /> */}
-      <h2>Library</h2>
-      <p>Check out our library of useful components and code snippets</p>
-      <PreviewRoll
-        itemWidth="50%"
-        postData={library}
+      <div className="section">
+        <h1>Learn To Code</h1>
+
+        {/* skewed background will go here. */}
+        <h2>Blog</h2>
+        <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
+        <PreviewRoll
+          itemWidth="50%"
+          postData={blog}
+        />
+
+        {/* <h2>Classes</h2>
+        <p>Attend one of our classes or meetups.</p>
+        <PreviewRoll
+          itemWidth="100%"
+          postData={meetups}
+        /> */}
+
+        <h2>Library</h2>
+        <p>Check out our library of useful components and code snippets</p>
+        <PreviewRoll
+          itemWidth="50%"
+          postData={library}
         // totalCount={props.totalCount}
-      />
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+        />
       </div>
-      <Link to="/">Go to page 2</Link> */}
     </Layout>
   )
 }

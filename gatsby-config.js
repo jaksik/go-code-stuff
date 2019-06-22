@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `<gocodestuff.com/>`,
     description: `A blog and component library for emerging technologies in the computer science world.`,
-    author: `@gatsbyjs`,
+    author: `@jaksik`,
     theme: `#333`,
   },
   plugins: [

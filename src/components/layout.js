@@ -30,14 +30,7 @@ const Layout = ({ children }) => (
         siteTitle={data.site.siteMetadata.title} 
         siteTheme={data.site.siteMetadata.theme}
         />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
+        <div>
           <main>{children}</main>
           <footer style={{ textAlign: `center`, fontSize: `15px` }}>
             © {new Date().getFullYear()}, Built By
