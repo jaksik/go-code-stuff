@@ -30,7 +30,11 @@ const Layout = ({ children }) => (
         siteTitle={data.site.siteMetadata.title} 
         siteTheme={data.site.siteMetadata.theme}
         />
-        <div>
+        <div
+          style={{
+          
+          }}
+        >
           <main>{children}</main>
           <footer style={{ textAlign: `center`, fontSize: `15px` }}>
             © {new Date().getFullYear()}, Built By

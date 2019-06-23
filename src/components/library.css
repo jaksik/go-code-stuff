@@ -21,3 +21,12 @@
       color: black;
       display: block;
     }
+
+    .component-view {
+      padding: 40px;
+    }
+
+    .component-body {
+      overflow-x: scroll
+
+    }

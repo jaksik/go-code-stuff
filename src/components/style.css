@@ -28,3 +28,7 @@ img{
 .post-list:hover {
     background-color: whitesmoke;
 }
+
+.row {
+    display: flex;
+}

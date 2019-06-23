@@ -7,7 +7,7 @@ class Library extends Component {
         super(props)
         this.data = props.data.allMarkdownRemark
         this.state = {
-            selected: ""
+            selected: "",
         }
         this.handleClick = this.handleClick.bind(this);
         console.log(this.data)
@@ -15,7 +15,7 @@ class Library extends Component {
 
     handleClick(e) {
         console.log(e);
-        this.setState({selected: e});
+        this.setState({ selected: e });
     }
 
     render() {
@@ -32,8 +32,11 @@ class Library extends Component {
                     })}
                 </div>
 
-                <div>
-
+                <div className="component-view">
+                    <div className="component-body">
+                        <h3>{this.state.selected ? this.state.selected.frontmatter.title : "Click a link in the library to begin."}</h3>
+                        <div dangerouslySetInnerHTML={{ __html: this.state.selected.html }} />
+                    </div>
                 </div>
             </div>
         )

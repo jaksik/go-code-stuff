@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Blog Preview Roll Component
+title: Scroll Animate
 date: "2017-08-10"
 image: ../../images/mountain.jpg
 
