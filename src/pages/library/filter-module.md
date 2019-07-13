@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: library-item
 title: React State Filter Module
 date: 2019-05-18T23:54:52.446Z
 description: Helllo testing in the library.

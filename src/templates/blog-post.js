@@ -12,7 +12,13 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <div>
+     <div 
+        style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `25px`
+        }}
+      >
       {thumbnail && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

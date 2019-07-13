@@ -35,11 +35,11 @@ const Layout = ({ children }) => (
           
           }}
         >
-          <main>{children}</main>
-          <footer style={{ textAlign: `center`, fontSize: `15px` }}>
-            © {new Date().getFullYear()}, Built By
+          <main style={{ minHeight: `90vh` }}>{children}</main>
+          <footer style={{ textAlign: `center`, fontSize: `15px`, color: `white`, background: data.site.siteMetadata.theme, minHeight: `50px` }}>
+            © {new Date().getFullYear()} {data.site.siteMetadata.title}, Built By
             {` `}
-            <a href="https://connorjaksik.com">Connor Jaksik</a>
+            <a href="https://connorjaksik.com" target="_blank" rel="noopener noreferrer" style={{ color: `lightblue`}}>Connor Jaksik</a>
           </footer>
         </div>
       </>

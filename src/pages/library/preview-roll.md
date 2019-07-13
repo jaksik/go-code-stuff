@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: library-item
 title: Blog Preview Roll Component
 date: "2017-08-10"
 image: ../../images/mountain.jpg

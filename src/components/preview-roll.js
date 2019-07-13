@@ -9,9 +9,8 @@ export default (props) => {
       {/* <p>Total Count: {props.totalCount}</p> */}
       <div className="row">
         {props.postData.edges.map(({ node }) => {
-          console.log("preview Roll: ", node)
           return (
-            <div className={props.class} style={{ width: props.itemWidth }}>
+            <div className={props.class}>
               <Link
                 to={node.fields.slug}
                 className="link"

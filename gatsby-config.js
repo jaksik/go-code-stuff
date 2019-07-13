@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `<gocodestuff.com/>`,
+    title: `<GoCodeStuff.com/>`,
     description: `A blog and component library for emerging technologies in the computer science world.`,
     author: `@jaksik`,
-    theme: `#333`,
+    theme: `rgba(0, 0, 0, .9)`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,6 +31,13 @@ module.exports = {
     },    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-136621668-1",
+        head: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

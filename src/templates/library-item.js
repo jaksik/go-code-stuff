@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Img from 'gatsby-image';
-
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(data)
+  
   return (
     <Layout>
       <div 
@@ -30,30 +28,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        images {
-          image {
-            childImageSharp {
-                resize(width: 1500, height: 1500) {
-                  src
-                }
-                fluid(maxWidth: 786) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-          }
-        }
       }
    }
   }
 `
-
-//   image {
-      //     childImageSharp {
-      //       resize(width: 1500, height: 1500) {
-      //         src
-      //       }
-      //       fluid(maxWidth: 786) {
-      //         ...GatsbyImageSharpFluid
-      //       }
-      //     }
-      //  }
