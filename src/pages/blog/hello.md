@@ -2,9 +2,7 @@
 templateKey: blog
 title: Using Different Markdown Templates in Gatsby JS
 date: 2019-05-18T17:53:35.406Z
-description: >-
-  In depth look at using different templates for your markdown files whem making
-  a website with Gatsby JS.
+description: In depth look at using different templates for your markdown files whem making a website with Gatsby JS.
 featuredpost: true
 images:
   - image: ../../images/mountain.jpg

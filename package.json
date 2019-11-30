@@ -1,7 +1,7 @@
 {
   "name": "go-code-stuff",
   "private": true,
-  "description": "A blog and library about programming.",
+  "description": "A blog about computer science and coding.",
   "version": "0.1.0",
   "author": "Connor Jaksik <gocodestuff@gmail.com>",
   "dependencies": {

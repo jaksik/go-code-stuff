@@ -1,22 +1,18 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import PreviewRoll from '../components/preview-roll'
 import "./style.css"
 
 const IndexPage = ({ data }) => {
   const blog = data.blog
-  // const meetups = data.meetups
-  const library = data.library
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h1 style={{ fontSize: `100px`}}>Go Code Stuff</h1>
+      <h1>Go Code Stuff</h1>
 
-      {/* skewed background will go here. */}
       <div className="section">
         <h2>Blog</h2>
         <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
@@ -24,28 +20,6 @@ const IndexPage = ({ data }) => {
           itemWidth="50%"
           postData={blog}
           class="items section"
-        />
-      </div>
-
-      {/* <h2>Classes</h2>
-        <p>Attend one of our classes or meetups.</p>
-        <PreviewRoll
-          itemWidth="100%"
-          postData={meetups}
-        /> */}
-
-      <div
-        style={{
-          background: `lightgray`
-        }}
-      >
-        <h2>Library</h2>
-        <p style={{ textAlign: `center`}}>Check out our library of useful components and code snippets</p>
-        <PreviewRoll
-          itemWidth="25%"
-          class="items-small"
-          postData={library}
-        // totalCount={props.totalCount}
         />
       </div>
     </Layout>
@@ -61,60 +35,21 @@ query{
        title
      }
   }
-  meetups: allMarkdownRemark(                  
-    filter: { fileAbsolutePath: {regex: "\/classes/"}}
-  ) {
-    edges {
-        node {
-        id
-       excerpt
-       fields {
-           slug
-       }
-       frontmatter {
-           date(formatString: "MMMM DD, YYYY")
-           title
-           description
-         }
-     }
-   }
- }
-  blog: allMarkdownRemark (                  
-   filter: { fileAbsolutePath: {regex: "\/blog/"}}
-  ) {
+  blog: allMarkdownRemark (filter: { fileAbsolutePath: {regex: "\/blog/"}}) {
     edges {
       node {
         id
         excerpt
         fields {
-           slug
+          slug
         }
         frontmatter {
-           date(formatString: "MMMM DD, YYYY")
-           title
-           description
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
         }
       }
     }
   }
-
-  library: allMarkdownRemark (                  
-    filter: { fileAbsolutePath: {regex: "\/library/"}}
-   ) {
-     edges {
-       node {
-         id
-         excerpt
-         fields {
-            slug
-         }
-         frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-         }
-       }
-     }
-   }
 }
 `

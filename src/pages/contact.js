@@ -10,7 +10,6 @@ export default () => (
         site {
           siteMetadata {
             title
-            theme
           }
         }
       }

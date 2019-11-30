@@ -3,7 +3,6 @@ module.exports = {
     title: `<GoCodeStuff.com/>`,
     description: `A blog and component library for emerging technologies in the computer science world.`,
     author: `@jaksik`,
-    theme: `rgba(0, 0, 0, .9)`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,28 +31,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-136621668-1",
-        head: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `go-code-stuff`,
+        short_name: `code`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
-
-
+    // `gatsby-plugin-netlify-cms`,
+    // 'gatsby-plugin-netlify', // make sure to keep it last in the array
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

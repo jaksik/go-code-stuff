@@ -31,10 +31,8 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: {regex: "\/blog/"}}
-      sort: { fields: [frontmatter___date], order: DESC }) {
-    totalCount
+    allMarkdownRemark(filter: { fileAbsolutePath: {regex: "\/blog/"}} sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
       edges {
         node {
           excerpt

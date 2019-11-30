@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Img from 'gatsby-image';
-
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -46,14 +44,3 @@ export const query = graphql`
    }
   }
 `
-
-//   image {
-      //     childImageSharp {
-      //       resize(width: 1500, height: 1500) {
-      //         src
-      //       }
-      //       fluid(maxWidth: 786) {
-      //         ...GatsbyImageSharpFluid
-      //       }
-      //     }
-      //  }
