@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from "gatsby"
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
 } from 'reactstrap';
 
 const Example = (props) => {
@@ -21,10 +18,8 @@ const Example = (props) => {
         <NavbarBrand href="/">Go Code Stuff</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
-              <NavLink href="/blog/">Blog</NavLink>
-            
-              <NavLink href="/about/">About</NavLink>
-
+          <Link to="/blog/">Blog</Link>
+          <Link to="/about/">About</Link>
         </Collapse>
       </Navbar>
     </div>
