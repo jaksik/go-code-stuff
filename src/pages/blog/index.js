@@ -1,25 +1,12 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import Layout from '../../components/layout'
-import PreviewRoll from '../../components/preview-roll'
 
 export default ({ data }) => {
-  const props = data.allMarkdownRemark
+
 
   return (
     <Layout>
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1>This is the Blog Page!</h1>
-            <PreviewRoll
-                    itemWidth="100%"
-            postData={props}
-            totalCount={props.totalCount}
-            />
-          </div>
-        </div>
-      </section>
     </Layout>
   )
 }

@@ -7,16 +7,8 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <div 
-        style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `25px`
-        }}
-      >
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
     </Layout>
   )
 }

@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PreviewRoll from '../components/preview-roll'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
 
 const IndexPage = ({ data }) => {
@@ -11,17 +12,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Go Code Stuff</h1>
+      <Img fluid={data.backgroundImage.childImageSharp.fluid}/>
 
-      <div className="section">
-        <h2>Blog</h2>
-        <p>Check out our coding blog informing you about the latest tech trends and demonstrating how to use the technologies.</p>
-        <PreviewRoll
-          itemWidth="50%"
-          postData={blog}
-          class="items section"
-        />
-      </div>
     </Layout>
   )
 }
@@ -34,6 +26,13 @@ query{
      siteMetadata {
        title
      }
+  }
+  backgroundImage: file(relativePath: { eq: "code.png" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
   }
   blog: allMarkdownRemark (filter: { fileAbsolutePath: {regex: "\/blog/"}}) {
     edges {
