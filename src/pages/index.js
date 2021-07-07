@@ -1,22 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./style.css"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Latest Blog Listings Will Go Here</p>
-    <p>Latest Class Updates Will Go Here</p>
-    <p>A Library preview will Go Here</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const blog = data.blog
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Img fluid={data.backgroundImage.childImageSharp.fluid}/>
+
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+query{
+  site {
+     siteMetadata {
+       title
+     }
+  }
+  backgroundImage: file(relativePath: { eq: "code.png" }) {
+    childImageSharp {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  blog: allMarkdownRemark (filter: { fileAbsolutePath: {regex: "\/blog/"}}) {
+    edges {
+      node {
+        id
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+}
+`

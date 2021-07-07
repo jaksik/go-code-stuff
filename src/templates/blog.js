@@ -4,13 +4,11 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  console.log(data)
   return (
     <Layout>
-      <div>
-          <h1>This is the second template</h1>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
     </Layout>
   )
 }
@@ -21,7 +19,20 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
+        images {
+          image {
+            childImageSharp {
+                resize(width: 1500, height: 1500) {
+                  src
+                }
+                fluid(maxWidth: 786) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+          }
+        }
       }
-    }
+   }
   }
 `

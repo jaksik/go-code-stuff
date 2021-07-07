@@ -1,14 +1,38 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import Layout from '../../components/layout'
 
-export default () => (
-  <Layout>
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          <h1>This is the Blog Page!</h1>
-        </div>
-      </div>
-    </section>
-  </Layout>
-)
+export default ({ data }) => {
+
+
+  return (
+    <Layout>
+    </Layout>
+  )
+}
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(filter: { fileAbsolutePath: {regex: "\/blog/"}} sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

@@ -1,25 +1,30 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "go-code-stuff",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A blog about computer science and coding.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Connor Jaksik <gocodestuff@gmail.com>",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "gatsby": "^2.5.5",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-netlify": "^2.0.17",
     "gatsby-plugin-netlify-cms": "^4.0.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-source-filesystem": "^2.0.36",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
     "netlify-cms-app": "^2.9.1",
+    "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "reactstrap": "^8.2.0"
   },
   "devDependencies": {
     "prettier": "^1.17.1"
